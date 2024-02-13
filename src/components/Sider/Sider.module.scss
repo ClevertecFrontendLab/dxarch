@@ -1,0 +1,57 @@
+@use '../../utils/variables' as var;
+
+.sider {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-between;
+    position: fixed;
+
+    :global {
+        .ant-menu {
+            .ant-menu-item {
+                margin: 0;
+                color: var.$character-light-1;
+
+                &-icon {
+                    color: var.$primary-light-9;
+                }
+            }
+
+            .ant-menu-item:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+
+        .ant-layout-sider-children {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+}
+
+.logo {
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+.trigger {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    cursor: pointer;
+    transform: translateX(100%) translateY(-25%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 66px;
+    clip-path: polygon(0% 0%,100% 12.121%,100% 87.879%,0% 100%,0% 0%);
+    background: white;
+    color: var.$neutral-gray-7;
+}
+
+.exit {
+    border-top: 1px solid #f0f0f0;
+}

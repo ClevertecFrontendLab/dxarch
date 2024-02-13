@@ -1,0 +1,58 @@
+@use '../../utils/variables' as var;
+
+.content {
+    :global {
+        h4.ant-typography {
+            font-weight: 500;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.wrapper {
+    max-width: 732px;
+}
+
+.list {
+    list-style-type: "— ";
+    list-style-position: inside;
+    padding: 0;
+    margin-bottom: 0;
+
+    font-weight: 400;
+    font-size: 16px;
+    color: #061178;
+}
+
+.title-card {
+    font-weight: 500;
+}
+
+.card {
+    text-align: center;
+    :global {
+        .ant-card {
+            &-body {
+                color: var.$primary-light-6;
+            }
+        }
+
+        .ant-card-small {
+            .ant-card-body {
+                padding: 12px 0;
+                .ant-btn {
+                    color: var.$primary-light-6;
+                }
+            }
+            .ant-card-head {
+                padding: 0 24px;
+                .ant-card-head-wrapper {
+                    .ant-card-head-title {
+                        padding: 12px 0;
+                    }
+                }
+            }
+        }
+
+    }
+}

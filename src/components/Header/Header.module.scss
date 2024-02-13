@@ -1,0 +1,30 @@
+@use '../../utils/variables' as var;
+
+.header {
+    * {
+        color: var.$character-light-1;
+    }
+
+    :global {
+        .ant-typography {
+            margin: 0;
+            width: 100%;
+            font-weight: 700;
+            color: var.$character-light-1;
+        }
+    }
+}
+
+.container {
+    display: flex;
+}
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 16px 24px;
+}
+
+.settings {
+    width: 132px;
+}

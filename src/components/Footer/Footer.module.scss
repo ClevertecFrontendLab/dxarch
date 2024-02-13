@@ -1,0 +1,39 @@
+@use '../../utils/variables' as var;
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    :global {
+        .ant-btn {
+            color: var.$primary-light-6;
+        }
+
+        .ant-card {
+            &-body {
+                padding: 12px 24px;
+            }
+
+            &-meta-title {
+                font-weight: 400;
+                color: var.$primary-light-6;
+            }
+
+            &-meta-description {
+                color: var.$character-light-secondary;
+            }
+
+            &-meta-detail > div:not(:last-child) {
+                margin-bottom: 0;
+            }
+
+            &-actions {
+                .ant-btn {
+                    color: var.$character-light-title;
+                }
+            }
+        }
+    }
+}
+
