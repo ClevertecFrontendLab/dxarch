@@ -1,0 +1,61 @@
+@use '../../utils/variables' as var;
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    :global {
+        .ant-btn {
+            color: var.$primary-light-6;
+        }
+
+        .ant-card {
+            &-body {
+                padding: 12px 24px;
+            }
+
+            &-meta-title {
+                font-weight: 400;
+                color: var.$primary-light-6;
+            }
+
+            &-meta-description {
+                color: var.$character-light-secondary;
+            }
+
+            &-meta-detail > div:not(:last-child) {
+                margin-bottom: 8px;
+            }
+
+            &-actions {
+                .ant-btn {
+                    color: var.$character-light-title;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 361px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+
+        .reviews {
+            order: 2;
+        }
+
+        :global {
+            .ant-card {
+                order: 1;
+                width: 100%;
+                &-body {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
