@@ -1,11 +1,11 @@
-import Icon, { CalendarOutlined, HeartFilled, IdcardOutlined, TrophyFilled } from '@ant-design/icons';
+import Icon, { CalendarTwoTone, HeartFilled, IdcardOutlined, TrophyFilled } from '@ant-design/icons';
 import { Exit } from '../../icons';
 
 const items = [
     {
         label: 'Календарь',
         key: '1',
-        icon: <CalendarOutlined />,
+        icon: <CalendarTwoTone twoToneColor="#061178"/>,
     },
     {
         label: 'Тренировки',

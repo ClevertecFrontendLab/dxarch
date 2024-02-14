@@ -25,12 +25,34 @@
             }
 
             &-meta-detail > div:not(:last-child) {
-                margin-bottom: 0;
+                margin-bottom: 8px;
             }
 
             &-actions {
                 .ant-btn {
                     color: var.$character-light-title;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 361px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+
+        .reviews {
+            order: 2;
+        }
+
+        :global {
+            .ant-card {
+                order: 1;
+                width: 100%;
+                &-body {
+                    text-align: center;
                 }
             }
         }

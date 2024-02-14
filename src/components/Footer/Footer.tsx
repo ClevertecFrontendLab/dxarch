@@ -5,7 +5,7 @@ const { Footer } = Layout;
 import styles from './Footer.module.scss';
 import { AndroidFilled, AppleFilled } from '@ant-design/icons';
 
-export const PageFooter: React.FC = () => {
+export const PageFooter: React.FC<any> = () => {
     return (
         <Footer className={styles.footer}>
             <Button type='link' size='large' className={styles.reviews}>

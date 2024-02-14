@@ -1,5 +1,7 @@
 import React from 'react';
-import {Layout, Card, Row, Col, Typography, Space, Button} from 'antd';
+import { v4 } from 'uuid';
+
+import {Layout, Card, Typography, Space, Button} from 'antd';
 const { Content } = Layout;
 
 import styles from './Content.module.scss';
@@ -27,32 +29,32 @@ const cardsData = [
     },
 ];
 
-export const PageContent: React.FC = () => {
+export const PageContent: React.FC<any> = ({collapsed}) => {
     return (
-        <Content className={styles.content}>
+        <Content className={collapsed ? styles.collapsed : styles.content}>
             <Space direction="vertical" size="large" className={styles.wrapper}>
-                <Card>
+                <Card className={styles.listCard}>
                     <ul className={styles.list}>
                         С CleverFit ты сможешь:
                         {data.map((item) => (
-                            <li>{item}</li>
+                            <li key={v4()}>{item}</li>
                         ))}
                     </ul>
                 </Card>
                 <Space direction='vertical' size="middle">
-                    <Card>
+                    <Card className={styles.listcard}>
                         <Typography.Title level={4} className={styles.titleCard}>
                             CleverFit — это не просто приложение, а твой личный помощник в мире фитнеса.
                             Не откладывай на завтра — начни тренироваться уже сегодня!
                         </Typography.Title>
                     </Card>
-                    <Row gutter={16}>
+                    <div className={styles.row}>
                         {cardsData.map((item) => (
-                            <Col span={8} className={styles.card}>
+                            <div className={styles.card} key={v4()}>
                                 <Card title={item.title} size="small">{item.actions}</Card>
-                            </Col>
+                            </div>
                         ))}
-                    </Row>
+                    </div>
                 </Space>
             </Space>
         </Content>

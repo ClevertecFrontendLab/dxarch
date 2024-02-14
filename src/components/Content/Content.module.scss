@@ -5,12 +5,15 @@
         h4.ant-typography {
             font-weight: 500;
             margin-bottom: 0;
+            line-height: 1.3;
         }
     }
+
+    margin-bottom: 180px;
 }
 
 .wrapper {
-    max-width: 732px;
+    max-width: 752px;
 }
 
 .list {
@@ -30,6 +33,7 @@
 
 .card {
     text-align: center;
+    width: 100%;
     :global {
         .ant-card {
             &-body {
@@ -48,11 +52,76 @@
                 padding: 0 24px;
                 .ant-card-head-wrapper {
                     .ant-card-head-title {
+                        font-size: 16px;
                         padding: 12px 0;
+                        font-weight: 400;
                     }
                 }
             }
         }
 
+    }
+}
+
+.row {
+    display: flex;
+    gap: 16px
+}
+
+@media (max-width: 835px) {
+    .content {
+        margin-bottom: 260px;
+    }
+
+    .collapsed {
+        margin-bottom: 385px;
+    }
+
+    .card {
+        :global {
+            .ant-card-small {
+                .ant-card-head {
+                    .ant-card-head-wrapper {
+                        .ant-card-head-title {
+                            white-space: normal;
+                            word-break: break-word;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 361px) {
+    .content {
+        :global {
+            .ant-card-body {
+                padding: 16px;
+            }
+        }
+    }
+
+    .collapsed {
+        margin-bottom: 24px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .card {
+        :global {
+            .ant-card-small {
+                .ant-card-head {
+                    .ant-card-head-wrapper {
+                        .ant-card-head-title {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

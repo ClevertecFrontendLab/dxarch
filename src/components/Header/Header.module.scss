@@ -28,3 +28,25 @@
 .settings {
     width: 132px;
 }
+
+@media (max-width: 835px) {
+    .header {
+        :global {
+            .ant-typography {
+                font-weight: 500;
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 361px) {
+    .header {
+        :global {
+            .ant-typography {
+                font-weight: 500;
+                font-size: 20px;
+            }
+        }
+    }
+}

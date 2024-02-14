@@ -6,3 +6,14 @@
 .padding {
     padding: 14px 46px 17px 29px;
 }
+
+@media (max-width: 361px) {
+    .logo {
+        width: 72px;
+        height: 18px;
+    }
+
+    .padding {
+        padding: 16px;
+    }
+}
